@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Authify",
+  "version": "1.0",
+  "description": "Handles OAuth2 password grant for specific domains.",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{396fe9f8-5ca1-47cd-8001-849538436dc6}",
+      "strict_min_version": "57.0"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            body { margin:15px 10px; }
+            label { display:block; font:messagebox; padding: 5px 0; }
+            textarea, input { width: 100%; padding:5px; border: 1px solid #ccc; }
+            textarea { resize: none; height:10em; }
+            form>div { margin-bottom: 10px; }
+            h3 { padding-top:15px; }
+            button { background-color: #eee; padding:10px 15px; border:0; border-radius:4px; }
+            button:hover { background-color: #ddd; }
+            td.delete { text-align:center; cursor:pointer; }
+            td,th { padding: 0 10px; }
+        </style>
+    </head>
+
+    <body>
+        <h2>Configured Handlers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th style="width:30%">URL Patterns</th>
+                    <th>Token URL</th>
+                    <th>Username</th>
+                    <th>Client ID</th>
+                </tr>
+            </thead>
+            <tbody id="configured"></tbody>
+        </table>
+
+        <h3>Add Handler</h3>
+        <form>
+            <div>
+                <label for="patterns">URL Patterns</label>
+                <textarea id="patterns"></textarea><br>
+                <small>Matching performed on URL substrings. One per line.</small>
+            </div>
+
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username">
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+
+            <div>
+                <label for="token_url">Token URL</label>
+                <input placeholder="https://..." type="url" id="token_url">
+            </div>
+
+            <div>
+                <label for="client_id">Client ID</label>
+                <input type="text" id="client_id">
+            </div>
+
+            <div>
+                <label for="client_secret">Client Secret</label>
+                <input type="password" id="client_secret">
+            </div>
+            <button id="save">Save</button>
+        </form>
+
+        <script src="options.js"></script>
+    </body>
+</html>
