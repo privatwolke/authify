@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Authify",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Handles OAuth2 password grant for specific domains.",
   "permissions": [
     "webRequest",
