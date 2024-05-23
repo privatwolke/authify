@@ -56,7 +56,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
             tokens = {}
           }
 
-          if (!tokens[site.id]) {
+          if (!tokens[site.id] || !tokens[site.id].refresh_token) {
             tokens[site.id] = await login(site.username, site.password, site.token_url, site.client_id, site.client_secret)
             await browser.storage.local.set({ tokens: tokens })
           }
